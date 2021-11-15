@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main{
+public class main{
     public static void main(String [] args) {
         //region operations
         System.out.println("Введите операцию");
