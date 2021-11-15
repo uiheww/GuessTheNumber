@@ -1,13 +1,16 @@
 import java.util.Scanner;
 
-public class main {
-
-    public static void main(String[] args){
+class Main{
+    public static void main(String [] args) {
+        //region operations
         System.out.println("Введите операцию");
         System.out.println("1. Сложение");
         System.out.println("2. Вычитание");
         System.out.println("3. Умножение");
         System.out.println("4. Деление");
+        //endregion
+
+        //region range of values
         while(true) {
             Scanner scanner = new Scanner(System.in);
             int operation = scanner.nextInt();
@@ -19,11 +22,14 @@ public class main {
             }
 
             else {
+            //region scanner and value
                 System.out.println("Введите первое число: ");
                 int a = scanner.nextInt();
                 System.out.println("Введите второе число: ");
                 int b = scanner.nextInt();
                 int result;
+                //endregion
+                //region conditions
                 if (operation == 1){
                     result = a + b;
                 } else if (operation == 2){
@@ -35,16 +41,14 @@ public class main {
                 else {
                     result = a / b;
                 }
+                //endregion
+
+                //region result
                 System.out.println("Результат = " + result);
                 scanner.close();
+                //endregion
                 break;
             }
-        }
+        }//endregion
     }
 }
-
-//region task_1
-/**1.Дописать калькулятор, чтобы он мог выполнять деление
-   2. Чтобы калькулятор при введение значения переменной "operation", отличного от заданных
-* выдавал в консоль сообщение об ошибке и предлагал заново ввести значение*/
-//endregion
