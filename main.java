@@ -8,29 +8,40 @@ public class main {
         System.out.println("2. Вычитание");
         System.out.println("3. Умножение");
         System.out.println("4. Деление");
-        //region Scanner and value
-        Scanner scanner = new Scanner(System.in);
-        int operation = scanner.nextInt();
-        System.out.println("Введите первое число: ");
-        int a = scanner.nextInt();
-        System.out.println("Введите второе число: ");
-        int b = scanner.nextInt();
-        int result;
-        //endregion
+        while(true) {
+            Scanner scanner = new Scanner(System.in);
+            int operation = scanner.nextInt();
+            if (operation >4){
+                System.out.println("Задано неверное число. Попробуйте снова: ");
+            }
+            else if (operation <1) {
+                System.out.println("Задано неверное число. Попробуйте снова: ");
+            }
 
-        if (operation == 1){
-            result = a + b;
-        } else if (operation == 2){
-            result = a - b;
-        } else if (operation == 3){
-            result = a * b;
-        } else {
-            result = a / b;
+            else {
+                System.out.println("Введите первое число: ");
+                int a = scanner.nextInt();
+                System.out.println("Введите второе число: ");
+                int b = scanner.nextInt();
+                int result;
+                if (operation == 1){
+                    result = a + b;
+                } else if (operation == 2){
+                    result = a - b;
+                }
+                else if (operation == 3){
+                    result = a * b;
+                }
+                else {
+                    result = a / b;
+                }
+                System.out.println("Результат = " + result);
+                scanner.close();
+                break;
+            }
         }
-        System.out.println("Результат = " + result);
     }
 }
-
 
 //region task_1
 /**1.Дописать калькулятор, чтобы он мог выполнять деление
